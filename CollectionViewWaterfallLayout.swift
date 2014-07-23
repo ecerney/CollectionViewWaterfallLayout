@@ -84,7 +84,6 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
             return collectionView.delegate as CollectionViewWaterfallLayoutDelegate
         }
     }
-    
     private var columnHeights = [Float]()
     private var sectionItemAttributes = [[UICollectionViewLayoutAttributes]]()
     private var allItemAttributes = [UICollectionViewLayoutAttributes]()
@@ -310,9 +309,9 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
                 break
             }
         }
-        for var i = unionRects.count - 1; i >= 0; --i {
+        for i in reverse(0..<unionRects.count) {
             if CGRectIntersectsRect(rect, unionRects[i]) {
-                end = min((i+1) * unionSize, allItemAttributes.count) // Constant?
+                end = min((i+1) * unionSize, allItemAttributes.count)
                 break
             }
         }
