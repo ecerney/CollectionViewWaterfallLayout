@@ -28,6 +28,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         
         let layout = CollectionViewWaterfallLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
+        layout.headerInset = UIEdgeInsetsMake(20, 0, 0, 0)
         layout.headerHeight = 50
         layout.footerHeight = 20
         layout.minimumColumnSpacing = 20
