@@ -12,7 +12,7 @@
 		029C0A30197E226600DA6FE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029C0A2E197E226600DA6FE9 /* Main.storyboard */; };
 		029C0A32197E226600DA6FE9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029C0A31197E226600DA6FE9 /* Images.xcassets */; };
 		029C0A3E197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A3D197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift */; };
-		029C0A48197E22A600DA6FE9 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A47197E22A600DA6FE9 /* CollectionViewWaterfallLayout.swift */; };
+		029C0A4C19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +35,7 @@
 		029C0A37197E226600DA6FE9 /* WaterfallFlowLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterfallFlowLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029C0A3C197E226600DA6FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		029C0A3D197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallFlowLayoutTests.swift; sourceTree = "<group>"; };
-		029C0A47197E22A600DA6FE9 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
+		029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewWaterfallLayout.swift; path = ../../CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,7 @@
 				029C0A2A197E226600DA6FE9 /* AppDelegate.swift */,
 				029C0A2C197E226600DA6FE9 /* ViewController.swift */,
 				029C0A2E197E226600DA6FE9 /* Main.storyboard */,
-				029C0A47197E22A600DA6FE9 /* CollectionViewWaterfallLayout.swift */,
+				029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */,
 				029C0A31197E226600DA6FE9 /* Images.xcassets */,
 				029C0A28197E226600DA6FE9 /* Supporting Files */,
 			);
@@ -213,7 +213,7 @@
 			files = (
 				029C0A2D197E226600DA6FE9 /* ViewController.swift in Sources */,
 				029C0A2B197E226600DA6FE9 /* AppDelegate.swift in Sources */,
-				029C0A48197E22A600DA6FE9 /* CollectionViewWaterfallLayout.swift in Sources */,
+				029C0A4C19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -399,6 +399,7 @@
 				029C0A43197E226600DA6FE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		029C0A44197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "WaterfallFlowLayoutTests" */ = {
 			isa = XCConfigurationList;
@@ -407,6 +408,7 @@
 				029C0A46197E226600DA6FE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
