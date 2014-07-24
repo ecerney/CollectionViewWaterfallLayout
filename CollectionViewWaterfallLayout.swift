@@ -79,9 +79,9 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
     }
     
     //MARK: Private Properties
-    private var delegate: CollectionViewWaterfallLayoutDelegate  {
+    private weak var delegate: CollectionViewWaterfallLayoutDelegate?  {
         get {
-            return collectionView.delegate as CollectionViewWaterfallLayoutDelegate
+            return collectionView.delegate as? CollectionViewWaterfallLayoutDelegate
         }
     }
     private var columnHeights = [Float]()
@@ -102,7 +102,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
             return;
         }
         
-        assert(delegate.conformsToProtocol(CollectionViewWaterfallLayoutDelegate), "UICollectionView's delegate should conform to WaterfallLayoutDelegate protocol")
+        assert(delegate?.conformsToProtocol(CollectionViewWaterfallLayoutDelegate), "UICollectionView's delegate should conform to WaterfallLayoutDelegate protocol")
         assert(columnCount > 0, "WaterfallFlowLayout's columnCount should be greater than 0")
         
         // Initialize variables
@@ -126,7 +126,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
             * 1. Get section-specific metrics (minimumInteritemSpacing, sectionInset)
             */
             var minimumInteritemSpacing: Float
-            if let height = delegate.collectionView?(collectionView, layout: self, minimumInteritemSpacingForSection: section) {
+            if let height = delegate?.collectionView?(collectionView, layout: self, minimumInteritemSpacingForSection: section) {
                 minimumInteritemSpacing = height
             }
             else {
@@ -134,7 +134,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
             }
             
             var sectionInset: UIEdgeInsets
-            if let inset = delegate.collectionView?(collectionView, layout: self, insetForSection: section) {
+            if let inset = delegate?.collectionView?(collectionView, layout: self, insetForSection: section) {
                 sectionInset = inset
             }
             else {
@@ -148,7 +148,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
             * 2. Section header
             */
             var headerHeight: Float
-            if let height = delegate.collectionView?(collectionView, layout: self, heightForHeaderInSection: section) {
+            if let height = delegate?.collectionView?(collectionView, layout: self, heightForHeaderInSection: section) {
                 headerHeight = height
             }
             else {
@@ -156,7 +156,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
             }
             
             var headerInset: UIEdgeInsets
-            if let inset = delegate.collectionView?(collectionView, layout: self, insetForHeaderInSection: section) {
+            if let inset = delegate?.collectionView?(collectionView, layout: self, insetForHeaderInSection: section) {
                 headerInset = inset
             }
             else {
@@ -194,10 +194,10 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
                 
                 let xOffset = Float(sectionInset.left) + Float(itemWidth + minimumColumnSpacing) * Float(columnIndex)
                 let yOffset = columnHeights[columnIndex]
-                let itemSize = delegate.collectionView(collectionView, layout: self, sizeForItemAtIndexPath: indexPath)
+                let itemSize = delegate?.collectionView(collectionView, layout: self, sizeForItemAtIndexPath: indexPath)
                 var itemHeight: Float = 0.0
-                if itemSize.height > 0 && itemSize.width > 0 {
-                    itemHeight = Float(itemSize.height) * itemWidth / Float(itemSize.width)
+                if itemSize?.height > 0 && itemSize?.width > 0 {
+                    itemHeight = Float(itemSize!.height) * itemWidth / Float(itemSize!.width)
                 }
                 
                 attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
@@ -216,7 +216,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
             var columnIndex = longestColumnIndex()
             top = columnHeights[columnIndex] - minimumInteritemSpacing + Float(sectionInset.bottom)
             
-            if let height = delegate.collectionView?(collectionView, layout: self, heightForFooterInSection: section) {
+            if let height = delegate?.collectionView?(collectionView, layout: self, heightForFooterInSection: section) {
                 footerHeight = height
             }
             else {
@@ -224,7 +224,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
             }
             
             var footerInset: UIEdgeInsets
-            if let inset = delegate.collectionView?(collectionView, layout: self, insetForFooterInSection: section) {
+            if let inset = delegate?.collectionView?(collectionView, layout: self, insetForFooterInSection: section) {
                 footerInset = inset
             }
             else {
