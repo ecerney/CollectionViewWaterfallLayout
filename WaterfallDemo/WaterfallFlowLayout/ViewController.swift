@@ -16,7 +16,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         var _cellSizes = [CGSize]()
         
         for _ in 0...100 {
-            _cellSizes.append(CGSize(width: 140, height: 50 + Int(arc4random()) % 100))
+            let random = Int(arc4random_uniform((UInt32(100))))
+            
+            _cellSizes.append(CGSize(width: 140, height: 50 + random))
         }
         
         return _cellSizes
