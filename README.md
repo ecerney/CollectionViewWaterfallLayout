@@ -1,4 +1,4 @@
-CollectionViewFlowLayout
+CollectionViewWaterfallLayout
 ========================
 
 Pinterest inspired layout for UICollectionViews
