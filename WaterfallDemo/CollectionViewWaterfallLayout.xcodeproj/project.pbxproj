@@ -26,13 +26,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		029C0A25197E226600DA6FE9 /* WaterfallFlowLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WaterfallFlowLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		029C0A25197E226600DA6FE9 /* CollectionViewWaterfallLayout.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewWaterfallLayout.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		029C0A29197E226600DA6FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		029C0A2A197E226600DA6FE9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		029C0A2C197E226600DA6FE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		029C0A2F197E226600DA6FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		029C0A31197E226600DA6FE9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		029C0A37197E226600DA6FE9 /* WaterfallFlowLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WaterfallFlowLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		029C0A37197E226600DA6FE9 /* CollectionViewWaterfallLayoutTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewWaterfallLayoutTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		029C0A3C197E226600DA6FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		029C0A3D197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallFlowLayoutTests.swift; sourceTree = "<group>"; };
 		029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewWaterfallLayout.swift; path = ../../CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
@@ -68,8 +68,8 @@
 		029C0A26197E226600DA6FE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				029C0A25197E226600DA6FE9 /* WaterfallFlowLayout.app */,
-				029C0A37197E226600DA6FE9 /* WaterfallFlowLayoutTests.xctest */,
+				029C0A25197E226600DA6FE9 /* CollectionViewWaterfallLayout.app */,
+				029C0A37197E226600DA6FE9 /* CollectionViewWaterfallLayoutTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,9 +115,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		029C0A24197E226600DA6FE9 /* WaterfallFlowLayout */ = {
+		029C0A24197E226600DA6FE9 /* CollectionViewWaterfallLayout */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 029C0A41197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "WaterfallFlowLayout" */;
+			buildConfigurationList = 029C0A41197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "CollectionViewWaterfallLayout" */;
 			buildPhases = (
 				029C0A21197E226600DA6FE9 /* Sources */,
 				029C0A22197E226600DA6FE9 /* Frameworks */,
@@ -127,14 +127,14 @@
 			);
 			dependencies = (
 			);
-			name = WaterfallFlowLayout;
+			name = CollectionViewWaterfallLayout;
 			productName = WaterfallFlowLayout;
-			productReference = 029C0A25197E226600DA6FE9 /* WaterfallFlowLayout.app */;
+			productReference = 029C0A25197E226600DA6FE9 /* CollectionViewWaterfallLayout.app */;
 			productType = "com.apple.product-type.application";
 		};
-		029C0A36197E226600DA6FE9 /* WaterfallFlowLayoutTests */ = {
+		029C0A36197E226600DA6FE9 /* CollectionViewWaterfallLayoutTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 029C0A44197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "WaterfallFlowLayoutTests" */;
+			buildConfigurationList = 029C0A44197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "CollectionViewWaterfallLayoutTests" */;
 			buildPhases = (
 				029C0A33197E226600DA6FE9 /* Sources */,
 				029C0A34197E226600DA6FE9 /* Frameworks */,
@@ -145,9 +145,9 @@
 			dependencies = (
 				029C0A39197E226600DA6FE9 /* PBXTargetDependency */,
 			);
-			name = WaterfallFlowLayoutTests;
+			name = CollectionViewWaterfallLayoutTests;
 			productName = WaterfallFlowLayoutTests;
-			productReference = 029C0A37197E226600DA6FE9 /* WaterfallFlowLayoutTests.xctest */;
+			productReference = 029C0A37197E226600DA6FE9 /* CollectionViewWaterfallLayoutTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -168,7 +168,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 029C0A20197E226600DA6FE9 /* Build configuration list for PBXProject "WaterfallFlowLayout" */;
+			buildConfigurationList = 029C0A20197E226600DA6FE9 /* Build configuration list for PBXProject "CollectionViewWaterfallLayout" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -181,8 +181,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				029C0A24197E226600DA6FE9 /* WaterfallFlowLayout */,
-				029C0A36197E226600DA6FE9 /* WaterfallFlowLayoutTests */,
+				029C0A24197E226600DA6FE9 /* CollectionViewWaterfallLayout */,
+				029C0A36197E226600DA6FE9 /* CollectionViewWaterfallLayoutTests */,
 			);
 		};
 /* End PBXProject section */
@@ -230,7 +230,7 @@
 /* Begin PBXTargetDependency section */
 		029C0A39197E226600DA6FE9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 029C0A24197E226600DA6FE9 /* WaterfallFlowLayout */;
+			target = 029C0A24197E226600DA6FE9 /* CollectionViewWaterfallLayout */;
 			targetProxy = 029C0A38197E226600DA6FE9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -332,7 +332,7 @@
 				INFOPLIST_FILE = WaterfallFlowLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CollectionViewWaterfallLayout;
 			};
 			name = Debug;
 		};
@@ -344,7 +344,7 @@
 				INFOPLIST_FILE = WaterfallFlowLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CollectionViewWaterfallLayout;
 			};
 			name = Release;
 		};
@@ -362,7 +362,7 @@
 				);
 				INFOPLIST_FILE = WaterfallFlowLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CollectionViewWaterfallLayoutTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Debug;
@@ -377,7 +377,7 @@
 				);
 				INFOPLIST_FILE = WaterfallFlowLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = CollectionViewWaterfallLayoutTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 			};
 			name = Release;
@@ -385,7 +385,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		029C0A20197E226600DA6FE9 /* Build configuration list for PBXProject "WaterfallFlowLayout" */ = {
+		029C0A20197E226600DA6FE9 /* Build configuration list for PBXProject "CollectionViewWaterfallLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				029C0A3F197E226600DA6FE9 /* Debug */,
@@ -394,7 +394,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		029C0A41197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "WaterfallFlowLayout" */ = {
+		029C0A41197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "CollectionViewWaterfallLayout" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				029C0A42197E226600DA6FE9 /* Debug */,
@@ -403,7 +403,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		029C0A44197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "WaterfallFlowLayoutTests" */ = {
+		029C0A44197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "CollectionViewWaterfallLayoutTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				029C0A45197E226600DA6FE9 /* Debug */,
