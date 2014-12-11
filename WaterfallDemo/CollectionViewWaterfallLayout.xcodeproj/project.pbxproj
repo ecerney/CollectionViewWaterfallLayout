@@ -351,7 +351,7 @@
 		029C0A45197E226600DA6FE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WaterfallFlowLayout.app/WaterfallFlowLayout";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -363,14 +363,14 @@
 				INFOPLIST_FILE = WaterfallFlowLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CollectionViewWaterfallLayoutTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionViewWaterfallLayout.app/CollectionViewWaterfallLayout";
 			};
 			name = Debug;
 		};
 		029C0A46197E226600DA6FE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WaterfallFlowLayout.app/WaterfallFlowLayout";
+				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -378,7 +378,7 @@
 				INFOPLIST_FILE = WaterfallFlowLayoutTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = CollectionViewWaterfallLayoutTests;
-				TEST_HOST = "$(BUNDLE_LOADER)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionViewWaterfallLayout.app/CollectionViewWaterfallLayout";
 			};
 			name = Release;
 		};
