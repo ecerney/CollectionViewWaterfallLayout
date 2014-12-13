@@ -25,7 +25,7 @@ Prerequisites
 -----------
 * ARC
 * iOS 7+
-* Xcode 6+ (Currently written on beta 4)
+* Xcode 6+ (Currently written on Xcode 6.1.1)
 
 How to Use
 -----------
