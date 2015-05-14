@@ -12,7 +12,7 @@ import UIKit
 let CollectionViewWaterfallElementKindSectionHeader = "CollectionViewWaterfallElementKindSectionHeader"
 let CollectionViewWaterfallElementKindSectionFooter = "CollectionViewWaterfallElementKindSectionFooter"
 
-@objc protocol CollectionViewWaterfallLayoutDelegate:UICollectionViewDelegate {
+@objc public protocol CollectionViewWaterfallLayoutDelegate:UICollectionViewDelegate {
     
     func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
     
@@ -30,49 +30,49 @@ let CollectionViewWaterfallElementKindSectionFooter = "CollectionViewWaterfallEl
     
 }
 
-class CollectionViewWaterfallLayout: UICollectionViewLayout {
+public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     
     //MARK: Private constants
     /// How many items to be union into a single rectangle
     private let unionSize = 20;
     
     //MARK: Public Properties
-    var columnCount:Int = 2 {
+    public var columnCount:Int = 2 {
         didSet {
             invalidateIfNotEqual(oldValue, newValue: columnCount)
         }
     }
-    var minimumColumnSpacing:Float = 10.0 {
+    public var minimumColumnSpacing:Float = 10.0 {
         didSet {
             invalidateIfNotEqual(oldValue, newValue: minimumColumnSpacing)
         }
     }
-    var minimumInteritemSpacing:Float = 10.0 {
+    public var minimumInteritemSpacing:Float = 10.0 {
         didSet {
             invalidateIfNotEqual(oldValue, newValue: minimumInteritemSpacing)
         }
     }
-    var headerHeight:Float = 0.0 {
+    public var headerHeight:Float = 0.0 {
         didSet {
             invalidateIfNotEqual(oldValue, newValue: headerHeight)
         }
     }
-    var footerHeight:Float = 0.0 {
+    public var footerHeight:Float = 0.0 {
         didSet {
             invalidateIfNotEqual(oldValue, newValue: footerHeight)
         }
     }
-    var headerInset:UIEdgeInsets = UIEdgeInsetsZero {
+    public var headerInset:UIEdgeInsets = UIEdgeInsetsZero {
         didSet {
             invalidateIfNotEqual(NSValue(UIEdgeInsets: oldValue), newValue: NSValue(UIEdgeInsets: headerInset))
         }
     }
-    var footerInset:UIEdgeInsets = UIEdgeInsetsZero {
+    public var footerInset:UIEdgeInsets = UIEdgeInsetsZero {
         didSet {
             invalidateIfNotEqual(NSValue(UIEdgeInsets: oldValue), newValue: NSValue(UIEdgeInsets: footerInset))
         }
     }
-    var sectionInset:UIEdgeInsets = UIEdgeInsetsZero {
+    public var sectionInset:UIEdgeInsets = UIEdgeInsetsZero {
         didSet {
             invalidateIfNotEqual(NSValue(UIEdgeInsets: oldValue), newValue: NSValue(UIEdgeInsets: sectionInset))
         }
@@ -93,7 +93,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
     
     
     //MARK: UICollectionViewLayout Methods
-    override func prepareLayout() {
+    override public func prepareLayout() {
         super.prepareLayout()
         
         let numberOfSections = collectionView?.numberOfSections()
@@ -261,7 +261,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
         }
     }
     
-    override func collectionViewContentSize() -> CGSize {
+    override public func collectionViewContentSize() -> CGSize {
         let numberOfSections = collectionView?.numberOfSections()
         if numberOfSections == 0 {
             return CGSizeZero
@@ -273,7 +273,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
         return contentSize!
     }
     
-    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
         if indexPath.section >= sectionItemAttributes.count {
             return nil
         }
@@ -285,7 +285,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
         return sectionItemAttributes[indexPath.section][indexPath.item]
     }
     
-    override func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override public func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
         var attribute: UICollectionViewLayoutAttributes?
         
         if elementKind == CollectionViewWaterfallElementKindSectionHeader {
@@ -298,7 +298,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
         return attribute
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject] {
+    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject] {
         var begin:Int = 0
         var end: Int = unionRects.count
         var attrs = [UICollectionViewLayoutAttributes]()
@@ -325,7 +325,7 @@ class CollectionViewWaterfallLayout: UICollectionViewLayout {
         return Array(attrs)
     }
     
-    override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    override public func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
         let oldBounds = collectionView?.bounds
         if CGRectGetWidth(newBounds) != CGRectGetWidth(oldBounds!) {
             return true
