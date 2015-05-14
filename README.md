@@ -25,7 +25,8 @@ Prerequisites
 -----------
 * ARC
 * iOS 7+
-* Xcode 6+ (Currently written on Xcode 6.1.1)
+* Written on Xcode 6.3.1
+* Swift 1.2
 
 How to Use
 -----------
@@ -48,7 +49,7 @@ var sectionInset:UIEdgeInsets = UIEdgeInsetsZero
 Your collection view's delegate must conforms to `CollectionViewWaterfallLayoutDelegate` protocol and implement the required method, all you need to do is return the original size of the item:
 
 ``` swift
-func collectionView(collectionView: UICollectionView!, layout: UICollectionViewLayout!, sizeForItemAtIndexPath indexPath: NSIndexPath!) -> CGSize
+func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
 ```
 
 Limitation
