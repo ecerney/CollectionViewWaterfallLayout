@@ -55,7 +55,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! UICollectionViewCell
         
         if let label = cell.contentView.viewWithTag(1) as? UILabel {
             label.text = String(indexPath.row)
@@ -64,7 +64,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String!, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
         var reusableView: UICollectionReusableView? = nil
         
         if kind == CollectionViewWaterfallElementKindSectionHeader {
