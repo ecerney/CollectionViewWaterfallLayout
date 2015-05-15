@@ -3,7 +3,7 @@ CollectionViewWaterfallLayout
 
 Pinterest inspired layout for UICollectionViews
 
-** Note: Cocoapod isn't working at the time. Swift issues I suspect. For now you can just add the file to your project manually. **
+**Note: Updated for Swift 1.2 and cocoapods**
 
 **CollectionViewWaterfallLayout** is a subclass of [UICollectionViewLayout](https://developer.apple.com/library/ios/documentation/uikit/reference/UICollectionViewLayout_class/Reference/Reference.html) written completely in Swift. This class is based off [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout) which was written by [chiahsien](https://github.com/chiahsien) in Objective C. This class tries to use as many new Swifty things to keep the code updated with current design patterns.
 
@@ -27,6 +27,13 @@ Prerequisites
 * iOS 7+
 * Written on Xcode 6.3.1
 * Swift 1.2
+
+Installation
+-----------
+CollectionViewWaterfallLayout is available through CocoaPods. To install it, simply add the following line to your Podfile:
+```
+pod "CollectionViewWaterfallLayout"
+```
 
 How to Use
 -----------
