@@ -298,7 +298,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         return attribute
     }
     
-    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject] {
+    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var begin:Int = 0
         var end: Int = unionRects.count
         var attrs = [UICollectionViewLayoutAttributes]()
@@ -309,7 +309,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
                 break
             }
         }
-        for i in reverse(0..<unionRects.count) {
+        for i in (0..<unionRects.count).reverse() {
             if CGRectIntersectsRect(rect, unionRects[i]) {
                 end = min((i+1) * unionSize, allItemAttributes.count)
                 break
@@ -339,7 +339,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         var index: Int = 0
         var shortestHeight = MAXFLOAT
         
-        for (idx, height) in enumerate(columnHeights) {
+        for (idx, height) in columnHeights.enumerate() {
             if height < shortestHeight {
                 shortestHeight = height
                 index = idx
@@ -353,7 +353,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         var index: Int = 0
         var longestHeight:Float = 0
         
-        for (idx, height) in enumerate(columnHeights) {
+        for (idx, height) in (columnHeights).enumerate() {
             if height > longestHeight {
                 longestHeight = height
                 index = idx
