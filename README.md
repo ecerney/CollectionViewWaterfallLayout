@@ -3,7 +3,7 @@ CollectionViewWaterfallLayout
 
 Pinterest inspired layout for UICollectionViews
 
-**Note: Updated for Swift 1.2 and cocoapods**
+**Note: Updated for Swift 2.0 and cocoapods**
 
 **CollectionViewWaterfallLayout** is a subclass of [UICollectionViewLayout](https://developer.apple.com/library/ios/documentation/uikit/reference/UICollectionViewLayout_class/Reference/Reference.html) written completely in Swift. This class is based off [CHTCollectionViewWaterfallLayout](https://github.com/chiahsien/CHTCollectionViewWaterfallLayout) which was written by [chiahsien](https://github.com/chiahsien) in Objective C. This class tries to use as many new Swifty things to keep the code updated with current design patterns.
 
@@ -26,7 +26,7 @@ Prerequisites
 * ARC
 * iOS 7+
 * Written on Xcode 6.3.1
-* Swift 1.2
+* Swift 2.0
 
 Installation
 -----------

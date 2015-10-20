@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "CollectionViewWaterfallLayout"
-  s.version      = "0.2.1"
+  s.version      = "0.2.2"
   s.summary      = "Pinterest inspired layout for UICollectionViews written in Swift"
   # s.description  = <<-DESC
   s.homepage     = "https://github.com/ecerney/CollectionViewWaterfallLayout"
@@ -67,7 +67,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ecerney/CollectionViewWaterfallLayout.git", :tag => 'v0.2.1' }
+  s.source       = { :git => "https://github.com/ecerney/CollectionViewWaterfallLayout.git", :tag => 'v0.2.2' }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #

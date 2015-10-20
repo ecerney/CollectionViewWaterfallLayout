@@ -113,7 +113,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         allItemAttributes.removeAll(keepCapacity: false)
         sectionItemAttributes.removeAll(keepCapacity: false)
         
-        for  idx in 0..<columnCount {
+        for _ in 0..<columnCount {
             self.columnHeights.append(0)
         }
         
@@ -213,7 +213,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
             * 4. Section footer
             */
             var footerHeight: Float
-            var columnIndex = longestColumnIndex()
+            let columnIndex = longestColumnIndex()
             top = columnHeights[columnIndex] - minimumInteritemSpacing + Float(sectionInset.bottom)
             
             if let height = delegate?.collectionView?(collectionView!, layout: self, heightForFooterInSection: section) {
@@ -273,7 +273,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         return contentSize!
     }
     
-    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override public func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         if indexPath.section >= sectionItemAttributes.count {
             return nil
         }
@@ -285,7 +285,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         return sectionItemAttributes[indexPath.section][indexPath.item]
     }
     
-    override public func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes! {
+    override public func layoutAttributesForSupplementaryViewOfKind(elementKind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
         var attribute: UICollectionViewLayoutAttributes?
         
         if elementKind == CollectionViewWaterfallElementKindSectionHeader {
@@ -298,7 +298,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         return attribute
     }
     
-    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [AnyObject] {
+    override public func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         var begin:Int = 0
         var end: Int = unionRects.count
         var attrs = [UICollectionViewLayoutAttributes]()
@@ -309,7 +309,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
                 break
             }
         }
-        for i in reverse(0..<unionRects.count) {
+        for i in (0..<unionRects.count).reverse() {
             if CGRectIntersectsRect(rect, unionRects[i]) {
                 end = min((i+1) * unionSize, allItemAttributes.count)
                 break
@@ -339,7 +339,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         var index: Int = 0
         var shortestHeight = MAXFLOAT
         
-        for (idx, height) in enumerate(columnHeights) {
+        for (idx, height) in columnHeights.enumerate() {
             if height < shortestHeight {
                 shortestHeight = height
                 index = idx
@@ -353,7 +353,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         var index: Int = 0
         var longestHeight:Float = 0
         
-        for (idx, height) in enumerate(columnHeights) {
+        for (idx, height) in columnHeights.enumerate() {
             if height > longestHeight {
                 longestHeight = height
                 index = idx
