@@ -55,7 +55,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as! UICollectionViewCell
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
         
         if let label = cell.contentView.viewWithTag(1) as? UILabel {
             label.text = String(indexPath.row)
@@ -68,14 +68,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         var reusableView: UICollectionReusableView? = nil
         
         if kind == CollectionViewWaterfallElementKindSectionHeader {
-            reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath) as? UICollectionReusableView
+            reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath)
             
             if let view = reusableView {
                 view.backgroundColor = UIColor.redColor()
             }
         }
         else if kind == CollectionViewWaterfallElementKindSectionFooter {
-            reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Footer", forIndexPath: indexPath) as? UICollectionReusableView
+            reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Footer", forIndexPath: indexPath)
             if let view = reusableView {
                 view.backgroundColor = UIColor.blueColor()
             }
