@@ -25,7 +25,7 @@ Prerequisites
 -----------
 * ARC
 * iOS 7+
-* Written on Xcode 6.3.1
+* Xcode 7+
 * Swift 2.0
 
 Installation
