@@ -353,7 +353,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
         var index: Int = 0
         var longestHeight:Float = 0
         
-        for (idx, height) in (columnHeights).enumerate() {
+        for (idx, height) in columnHeights.enumerate() {
             if height > longestHeight {
                 longestHeight = height
                 index = idx
