@@ -14,7 +14,6 @@
 		029C0A3E197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A3D197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift */; };
 		029C0A4C19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */; };
 		B0253DA31BE3392600027A60 /* CollectionViewWaterfallLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B0253DA21BE3392600027A60 /* CollectionViewWaterfallLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B0253DA71BE3392600027A60 /* CollectionViewWaterfallLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0253DA01BE3392600027A60 /* CollectionViewWaterfallLayout.framework */; };
 		B0253DA81BE3392600027A60 /* CollectionViewWaterfallLayout.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = B0253DA01BE3392600027A60 /* CollectionViewWaterfallLayout.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		B0253DAD1BE3393700027A60 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */; };
 /* End PBXBuildFile section */
@@ -71,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B0253DA71BE3392600027A60 /* CollectionViewWaterfallLayout.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -576,6 +574,7 @@
 				B0253DAA1BE3392600027A60 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
