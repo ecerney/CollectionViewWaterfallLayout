@@ -59,6 +59,8 @@ Your collection view's delegate must conforms to `CollectionViewWaterfallLayoutD
 func collectionView(collectionView: UICollectionView, layout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize
 ```
 
+[Code Only Example](https://gist.github.com/entotsu/764b496d7d21d126ae48)
+
 Limitation
 ----------
 * Only vertical scrolling is supported.
