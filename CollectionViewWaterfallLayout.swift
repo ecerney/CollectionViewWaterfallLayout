@@ -82,7 +82,8 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     private weak var prefferedDelegate: CollectionViewWaterfallLayoutDelegate?
     private weak var delegate: CollectionViewWaterfallLayoutDelegate?  {
         get {
-            return collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate
+            return prefferedDelegate ??
+                (collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate)
         }
     }
     private var columnHeights = [Float]()
