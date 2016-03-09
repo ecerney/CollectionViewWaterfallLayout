@@ -92,6 +92,18 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     private var footersAttribute = [Int: UICollectionViewLayoutAttributes]()
     private var unionRects = [CGRect]()
     
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override public init() {
+        super.init()
+    }
+    
+    convenience public init(delegate: CollectionViewWaterfallLayoutDelegate) {
+        self.init()
+        prefferedDelegate = delegate
+    }
     
     //MARK: UICollectionViewLayout Methods
     override public func prepareLayout() {
