@@ -79,6 +79,7 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     }
     
     //MARK: Private Properties
+    private weak var prefferedDelegate: CollectionViewWaterfallLayoutDelegate?
     private weak var delegate: CollectionViewWaterfallLayoutDelegate?  {
         get {
             return collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate
