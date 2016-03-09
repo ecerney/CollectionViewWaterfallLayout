@@ -79,9 +79,11 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     }
     
     //MARK: Private Properties
+    private weak var prefferedDelegate: CollectionViewWaterfallLayoutDelegate?
     private weak var delegate: CollectionViewWaterfallLayoutDelegate?  {
         get {
-            return collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate
+            return prefferedDelegate ??
+                (collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate)
         }
     }
     private var columnHeights = [Float]()
@@ -91,6 +93,18 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     private var footersAttribute = [Int: UICollectionViewLayoutAttributes]()
     private var unionRects = [CGRect]()
     
+    required public init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+    }
+    
+    override public init() {
+        super.init()
+    }
+    
+    convenience public init(delegate: CollectionViewWaterfallLayoutDelegate) {
+        self.init()
+        prefferedDelegate = delegate
+    }
     
     //MARK: UICollectionViewLayout Methods
     override public func prepareLayout() {
