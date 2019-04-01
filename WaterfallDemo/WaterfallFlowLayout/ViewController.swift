@@ -30,15 +30,15 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         
         let layout = CollectionViewWaterfallLayout()
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
-        layout.headerInset = UIEdgeInsetsMake(20, 0, 0, 0)
+        layout.headerInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         layout.headerHeight = 50
         layout.footerHeight = 20
         layout.minimumColumnSpacing = 10
         layout.minimumInteritemSpacing = 10
         
         collectionView.collectionViewLayout = layout
-        collectionView.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: CollectionViewWaterfallElementKindSectionHeader, withReuseIdentifier: "Header")
-        collectionView.registerClass(UICollectionReusableView.self, forSupplementaryViewOfKind: CollectionViewWaterfallElementKindSectionFooter, withReuseIdentifier: "Footer")
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: CollectionViewWaterfallElementKindSectionHeader, withReuseIdentifier: "Header")
+        collectionView.register(UICollectionReusableView.self, forSupplementaryViewOfKind: CollectionViewWaterfallElementKindSectionFooter, withReuseIdentifier: "Footer")
     }
     
     override func didReceiveMemoryWarning() {
@@ -50,12 +50,12 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         return 1
     }
     
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return cellSizes.count
     }
     
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath)
         
         if let label = cell.contentView.viewWithTag(1) as? UILabel {
             label.text = String(indexPath.row)
@@ -64,20 +64,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, CollectionVi
         return cell
     }
     
-    func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         var reusableView: UICollectionReusableView? = nil
         
         if kind == CollectionViewWaterfallElementKindSectionHeader {
-            reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Header", forIndexPath: indexPath)
+            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Header", for: indexPath)
             
             if let view = reusableView {
-                view.backgroundColor = UIColor.redColor()
+                view.backgroundColor = UIColor.red
             }
         }
         else if kind == CollectionViewWaterfallElementKindSectionFooter {
-            reusableView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "Footer", forIndexPath: indexPath)
+            reusableView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Footer", for: indexPath)
             if let view = reusableView {
-                view.backgroundColor = UIColor.blueColor()
+                view.backgroundColor = UIColor.blue
             }
         }
         
