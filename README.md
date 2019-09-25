@@ -37,6 +37,12 @@ pod "CollectionViewWaterfallLayout"
 
 How to Use
 -----------
+
+Make sure to import the pod in the files you plan to use it in:
+```
+import CollectionViewWaterfallLayout
+```
+
 Check out the demo project for an example using storyboards to set up the views, and that programmatically creates and customizes the waterfall layout.
 
 #### Customizable Properties
