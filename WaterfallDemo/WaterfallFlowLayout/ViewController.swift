@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CollectionViewWaterfallLayout
 
 class ViewController: UIViewController {
     
@@ -27,7 +28,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let layout = CollectionViewWaterfallLayout()
+        let layout = CollectionViewWaterfallLayout(delegate: self)
         layout.sectionInset = UIEdgeInsets(top: 10, left: 10, bottom: 10, right: 10)
         layout.headerInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         layout.headerHeight = 50

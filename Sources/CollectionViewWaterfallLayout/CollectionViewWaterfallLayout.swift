@@ -90,17 +90,20 @@ public class CollectionViewWaterfallLayout: UICollectionViewLayout {
     }
     
     // MARK: - Private Properties
-    private weak var delegate: CollectionViewWaterfallLayoutDelegate?  {
-        get {
-            return collectionView?.delegate as? CollectionViewWaterfallLayoutDelegate
-        }
-    }
+    weak var delegate: CollectionViewWaterfallLayoutDelegate?
+    
     private var columnHeights = [Float]()
     private var sectionItemAttributes = [[UICollectionViewLayoutAttributes]]()
     private var allItemAttributes = [UICollectionViewLayoutAttributes]()
     private var headersAttribute = [Int: UICollectionViewLayoutAttributes]()
     private var footersAttribute = [Int: UICollectionViewLayoutAttributes]()
     private var unionRects = [CGRect]()
+    
+    // MARK: - Initialization
+    public convenience init(delegate: CollectionViewWaterfallLayoutDelegate) {
+        self.init()
+        self.delegate = delegate
+    }
     
     // MARK: - UICollectionViewLayout Methods
     public override func prepare() {

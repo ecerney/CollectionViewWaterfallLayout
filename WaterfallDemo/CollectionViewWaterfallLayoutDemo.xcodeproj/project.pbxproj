@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,19 +13,8 @@
 		029C0A2D197E226600DA6FE9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A2C197E226600DA6FE9 /* ViewController.swift */; };
 		029C0A30197E226600DA6FE9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 029C0A2E197E226600DA6FE9 /* Main.storyboard */; };
 		029C0A32197E226600DA6FE9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 029C0A31197E226600DA6FE9 /* Images.xcassets */; };
-		029C0A3E197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A3D197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift */; };
-		029C0A4C19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */; };
+		30F6564B2591EF8C005EFF4B /* CollectionViewWaterfallLayout in Frameworks */ = {isa = PBXBuildFile; productRef = 30F6564A2591EF8C005EFF4B /* CollectionViewWaterfallLayout */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		029C0A38197E226600DA6FE9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 029C0A1D197E226600DA6FE9 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 029C0A24197E226600DA6FE9;
-			remoteInfo = WaterfallFlowLayout;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		026447C0233ADD4300271918 /* LabelCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -36,10 +25,7 @@
 		029C0A2C197E226600DA6FE9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		029C0A2F197E226600DA6FE9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		029C0A31197E226600DA6FE9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		029C0A37197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemo.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CollectionViewWaterfallLayoutDemo.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		029C0A3C197E226600DA6FE9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		029C0A3D197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallFlowLayoutTests.swift; sourceTree = "<group>"; };
-		029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionViewWaterfallLayout.swift; path = ../../CollectionViewWaterfallLayout.swift; sourceTree = "<group>"; };
+		30F656472591EF83005EFF4B /* CollectionViewWaterfallLayout */ = {isa = PBXFileReference; lastKnownFileType = folder; name = CollectionViewWaterfallLayout; path = ..; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,13 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		029C0A34197E226600DA6FE9 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				30F6564B2591EF8C005EFF4B /* CollectionViewWaterfallLayout in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,9 +43,10 @@
 		029C0A1C197E226600DA6FE9 = {
 			isa = PBXGroup;
 			children = (
+				30F656472591EF83005EFF4B /* CollectionViewWaterfallLayout */,
 				029C0A27197E226600DA6FE9 /* WaterfallFlowLayout */,
-				029C0A3A197E226600DA6FE9 /* WaterfallFlowLayoutTests */,
 				029C0A26197E226600DA6FE9 /* Products */,
+				30F656492591EF8C005EFF4B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -73,7 +54,6 @@
 			isa = PBXGroup;
 			children = (
 				029C0A25197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemo.app */,
-				029C0A37197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemo.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -86,7 +66,6 @@
 				026447C0233ADD4300271918 /* LabelCollectionViewCell.swift */,
 				029C0A2E197E226600DA6FE9 /* Main.storyboard */,
 				026447C2233AE30900271918 /* LaunchScreen.storyboard */,
-				029C0A4B19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift */,
 				029C0A31197E226600DA6FE9 /* Images.xcassets */,
 				029C0A28197E226600DA6FE9 /* Supporting Files */,
 			);
@@ -101,21 +80,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		029C0A3A197E226600DA6FE9 /* WaterfallFlowLayoutTests */ = {
+		30F656492591EF8C005EFF4B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				029C0A3D197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift */,
-				029C0A3B197E226600DA6FE9 /* Supporting Files */,
 			);
-			path = WaterfallFlowLayoutTests;
-			sourceTree = "<group>";
-		};
-		029C0A3B197E226600DA6FE9 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				029C0A3C197E226600DA6FE9 /* Info.plist */,
-			);
-			name = "Supporting Files";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -134,27 +103,12 @@
 			dependencies = (
 			);
 			name = CollectionViewWaterfallLayoutDemo;
+			packageProductDependencies = (
+				30F6564A2591EF8C005EFF4B /* CollectionViewWaterfallLayout */,
+			);
 			productName = WaterfallFlowLayout;
 			productReference = 029C0A25197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemo.app */;
 			productType = "com.apple.product-type.application";
-		};
-		029C0A36197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 029C0A44197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "CollectionViewWaterfallLayoutDemoTests" */;
-			buildPhases = (
-				029C0A33197E226600DA6FE9 /* Sources */,
-				029C0A34197E226600DA6FE9 /* Frameworks */,
-				029C0A35197E226600DA6FE9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				029C0A39197E226600DA6FE9 /* PBXTargetDependency */,
-			);
-			name = CollectionViewWaterfallLayoutDemoTests;
-			productName = WaterfallFlowLayoutTests;
-			productReference = 029C0A37197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemo.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -168,10 +122,6 @@
 				TargetAttributes = {
 					029C0A24197E226600DA6FE9 = {
 						CreatedOnToolsVersion = 6.0;
-					};
-					029C0A36197E226600DA6FE9 = {
-						CreatedOnToolsVersion = 6.0;
-						TestTargetID = 029C0A24197E226600DA6FE9;
 					};
 				};
 			};
@@ -189,7 +139,6 @@
 			projectRoot = "";
 			targets = (
 				029C0A24197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemo */,
-				029C0A36197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -205,13 +154,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		029C0A35197E226600DA6FE9 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -221,28 +163,11 @@
 			files = (
 				029C0A2D197E226600DA6FE9 /* ViewController.swift in Sources */,
 				029C0A2B197E226600DA6FE9 /* AppDelegate.swift in Sources */,
-				029C0A4C19802E5E00DA6FE9 /* CollectionViewWaterfallLayout.swift in Sources */,
 				026447C1233ADD4300271918 /* LabelCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		029C0A33197E226600DA6FE9 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				029C0A3E197E226600DA6FE9 /* WaterfallFlowLayoutTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		029C0A39197E226600DA6FE9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 029C0A24197E226600DA6FE9 /* CollectionViewWaterfallLayoutDemo */;
-			targetProxy = 029C0A38197E226600DA6FE9 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		029C0A2E197E226600DA6FE9 /* Main.storyboard */ = {
@@ -368,7 +293,10 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WaterfallFlowLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ecerney.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CollectionViewWaterfallLayoutDemo;
 				SWIFT_VERSION = 5.0;
@@ -382,48 +310,13 @@
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = WaterfallFlowLayout/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ecerney.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = CollectionViewWaterfallLayoutDemo;
 				SWIFT_VERSION = 5.0;
-			};
-			name = Release;
-		};
-		029C0A45197E226600DA6FE9 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WaterfallFlowLayoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ecerney.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = CollectionViewWaterfallLayoutDemo;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionViewWaterfallLayoutDemo.app/CollectionViewWaterfallLayoutDemo";
-			};
-			name = Debug;
-		};
-		029C0A46197E226600DA6FE9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = WaterfallFlowLayoutTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.ecerney.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = CollectionViewWaterfallLayoutDemo;
-				SWIFT_VERSION = 5.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CollectionViewWaterfallLayoutDemo.app/CollectionViewWaterfallLayoutDemo";
 			};
 			name = Release;
 		};
@@ -448,16 +341,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		029C0A44197E226600DA6FE9 /* Build configuration list for PBXNativeTarget "CollectionViewWaterfallLayoutDemoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				029C0A45197E226600DA6FE9 /* Debug */,
-				029C0A46197E226600DA6FE9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		30F6564A2591EF8C005EFF4B /* CollectionViewWaterfallLayout */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CollectionViewWaterfallLayout;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 029C0A1D197E226600DA6FE9 /* Project object */;
 }
