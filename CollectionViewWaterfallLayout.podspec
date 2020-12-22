@@ -13,6 +13,6 @@ Pod::Spec.new do |s|
   s.social_media_url = 'https://twitter.com/ecerney'
   s.ios.deployment_target = '8.0'
   s.swift_versions = '5.0'
-  s.source_files = 'CollectionViewWaterfallLayout.swift'
+  s.source_files = 'Sources/CollectionViewWaterfallLayout/CollectionViewWaterfallLayout.swift'
   s.frameworks = 'UIKit'
 end

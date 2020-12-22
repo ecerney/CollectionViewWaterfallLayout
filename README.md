@@ -30,9 +30,17 @@ Prerequisites
 
 Installation
 -----------
+## Cocoapods
 CollectionViewWaterfallLayout is available through CocoaPods. To install it, simply add the following line to your Podfile:
 ```
 pod "CollectionViewWaterfallLayout"
+```
+
+## Swift Package Manager
+
+CollectionViewWaterfallLayout can be installed via Swift Package Manager. To use it in your project, open Xcode, go to menu File -> Swift Packages -> Add Package Dependency, and paste this repo's URL:
+```
+https://github.com/ecerney/CollectionViewWaterfallLayout.git
 ```
 
 How to Use
